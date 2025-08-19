@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Transpose {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter no of rows ");
+		int rows=sc.nextInt();
+		System.out.print("Enter no of columns ");
+		int columns=sc.nextInt();
+		int [] [] matrix=new int[rows][columns];
+		int [] [] matrix1=new int[rows][columns];
+		System.out.println("Enter elements of matrix");
+		for (int i=0;i<rows;i++) {
+			for (int j=0;j<columns;j++) {
+				 matrix[i][j]=sc.nextInt();
+			}
+		}
+		for (int i=0;i<rows;i++) {
+			for (int j=0;j<columns;j++) {
+				 matrix1[i][j]=matrix[j][i];
+			}
+		}
+		for (int j=0;j<matrix.length;j++) {
+			for (int i=0;i<columns;i++) {
+				System.out.print(matrix1[j][i]+"\t");
+			}
+			System.out.println();
+		
+		}
+	}
+}
